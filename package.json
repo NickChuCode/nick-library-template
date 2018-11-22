@@ -1,0 +1,25 @@
+{
+  "name": "nick-library-template",
+  "version": "1.0.0",
+  "description": "a template for building an open source library",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickChuCode/nick-library-template.git"
+  },
+  "keywords": [
+    "template"
+  ],
+  "author": "Nick Chu <nickchu15@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NickChuCode/nick-library-template/issues"
+  },
+  "homepage": "https://github.com/NickChuCode/nick-library-template#readme",
+  "dependencies": {
+    "unique-random-array": "^1.0.1"
+  }
+}
