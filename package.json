@@ -4,7 +4,8 @@
   "description": "a template for building an open source library",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,9 @@
   "homepage": "https://github.com/NickChuCode/nick-library-template#readme",
   "dependencies": {
     "unique-random-array": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-kentcdodds": "^14.0.4"
   }
 }
