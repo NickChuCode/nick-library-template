@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "watch:test": "mocha --watch"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,9 @@
     "unique-random-array": "^1.0.1"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^5.9.0",
-    "eslint-config-kentcdodds": "^14.0.4"
+    "eslint-config-kentcdodds": "^14.0.4",
+    "mocha": "^5.2.0"
   }
 }
