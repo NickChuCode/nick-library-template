@@ -9,9 +9,8 @@
 'use strict'
 
 var expect = require('chai').expect
-var should = require('chai').should()
 // 在node中，可以用.代替./index
-const starwarsNames = require('.')
+var starwarsNames = require('.')
 
 describe('starwars-names', function () {
     it('should have a list a available names', function () {
@@ -23,11 +22,13 @@ describe('starwars-names', function () {
 })
 
 function isArrayOfStrings(arr) {
-    return arr.every((item) => typeof item === 'string')
+    return arr.every(function (item) {
+        return typeof item === 'string'
+    })
 }
 
 function isIncludedIn(array) {
     return function (item) {
-        return starwarsNames.all.indexOf(item) > -1
+        return array.indexOf(item) > -1
     }
 }
