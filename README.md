@@ -21,3 +21,8 @@ I like it!
 
 - npm-run-all的作用是：将"npm run lint && npm run test"写成"npm-run-all --parallel lint test"的形式。而且不止是这样，它可以并行的运行其中的命令，所以会比前面的线性的运行要快。
 - ghook的配置在package.json的config下，写一个ghook，在其中定义。
+
+## transpiling
+
+- babel的配置也可以在package.json中写
+- babel可以替你做很多事情，比如我们可以不用写;号了，babel会自动替你填好。此外，'use strict'也会自动帮你加上
