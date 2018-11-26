@@ -26,3 +26,7 @@ I like it!
 
 - babel的配置也可以在package.json中写
 - babel可以替你做很多事情，比如我们可以不用写;号了，babel会自动替你填好。此外，'use strict'也会自动帮你加上
+- 在babel的命令行中加--ignore *.test.js可以让babel忽略掉测试文件
+- npm script中可以通过prexxx来在xxx的script前增加一些操作
+- rimraf是一个npm包，可以实现跨平台的命令行统一的rm -rf(因为删除命令，不同的平台上是不同的，比如mac是rm -rf，而win是rmdir)
+- 我们直接运行dist中的文件会报错，因为dist中没有那个json文件，我们可以用babel命令行的--copy-files把这个文件copy到dist中，从而保证我们所引用的所有文件都在dist中
