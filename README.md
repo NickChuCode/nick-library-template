@@ -33,4 +33,9 @@ I like it!
 - npm pack是一个将项目打包的命令，也是npm publish命令就是先内部运行npm pack，然后将打包的结果上传到npm中，你可以打开那个tgz来看看里面有什么
 - 如果我们不想把src和test文件打包到tgz中，可以在package.json中加入一个files属性，license, readme和package.json是默认要放入tgz的，所以不用显式的加入
 - 需要把main的地址改为dist，否则可以会有引用错误出现(不过现在npm pack智能多了，如果它发现你的main还是src/xxx的话，就算你没有在files属性中包含src，它也会把src包含在tgz中，这样就不会出现引用错误了，但文件也变大了，所以还是建议及时更改main属性)
+- 不要把dist目录上传到github中，这是给用户用的，不是源码
+- 可以用babel register会劫持代码中的require，在require之前，先transpile代码，然后再引入，生产环境中不推荐，但是在测试环境中可以使用
+- 通过在npm的babel配置中增加env属性，babel编译的时候，不会再把测试代码也编译到源码中了，而在测试的时候，node env是test，此时才transpile测试代码。这样npm test和npm run build都不会出现问题，而且源码中不会出现奇怪的代码了
+- 但是NODE_ENV=test只有在mac下才能生效，而win下是没有用的，所以用cross env插件，这样mac和win都可以用了
+
 
