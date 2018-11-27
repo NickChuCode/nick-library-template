@@ -2,7 +2,7 @@
   "name": "nick-library-template",
   "version": "1.0.0",
   "description": "a template for building an open source library",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "babel --copy-files --ignore *.test.js --out-dir dist src",
@@ -18,6 +18,9 @@
   },
   "keywords": [
     "template"
+  ],
+  "files":[
+    "dist"
   ],
   "author": "Nick Chu <nickchu15@outlook.com>",
   "license": "MIT",

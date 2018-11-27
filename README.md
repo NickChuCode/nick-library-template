@@ -30,3 +30,7 @@ I like it!
 - npm script中可以通过prexxx来在xxx的script前增加一些操作
 - rimraf是一个npm包，可以实现跨平台的命令行统一的rm -rf(因为删除命令，不同的平台上是不同的，比如mac是rm -rf，而win是rmdir)
 - 我们直接运行dist中的文件会报错，因为dist中没有那个json文件，我们可以用babel命令行的--copy-files把这个文件copy到dist中，从而保证我们所引用的所有文件都在dist中
+- npm pack是一个将项目打包的命令，也是npm publish命令就是先内部运行npm pack，然后将打包的结果上传到npm中，你可以打开那个tgz来看看里面有什么
+- 如果我们不想把src和test文件打包到tgz中，可以在package.json中加入一个files属性，license, readme和package.json是默认要放入tgz的，所以不用显式的加入
+- 需要把main的地址改为dist，否则可以会有引用错误出现(不过现在npm pack智能多了，如果它发现你的main还是src/xxx的话，就算你没有在files属性中包含src，它也会把src包含在tgz中，这样就不会出现引用错误了，但文件也变大了，所以还是建议及时更改main属性)
+
