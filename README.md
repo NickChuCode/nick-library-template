@@ -38,4 +38,11 @@ I like it!
 - 通过在npm的babel配置中增加env属性，babel编译的时候，不会再把测试代码也编译到源码中了，而在测试的时候，node env是test，此时才transpile测试代码。这样npm test和npm run build都不会出现问题，而且源码中不会出现奇怪的代码了
 - 但是NODE_ENV=test只有在mac下才能生效，而win下是没有用的，所以用cross env插件，这样mac和win都可以用了
 
+## webpack
+- 因为node和浏览器环境下的模块化不太一样，所以引入webpack来统一
+- 使用了webpack4升级了原课程中的webpack 1，所以配置不太一样
+- 如何测试打包好的umd.js呢？在命令行中输入node，然后require看是否成功；在browser中F12打开console，把umd中的代码全部拷贝进去，然后运行（名字是webpack中library属性的名称），看是否能正常运行。
+- webpack4自己支持json解析，所以不用json-loader
+- 在webpack命令中加-p就可以压缩代码
+- "npm-run-all --parallel build:*"可以运行所有的build:开头的script，所以可以同时打包出dist, umd和min版本
 
