@@ -46,3 +46,19 @@ I like it!
 - 在webpack命令中加-p就可以压缩代码
 - "npm-run-all --parallel build:*"可以运行所有的build:开头的script，所以可以同时打包出dist, umd和min版本
 
+## 什么时候用peerDependencies
+- 当你在构建一个被别的项目使用的库的时候
+- 这个库用了其他的一些库
+- 你希望使用你的库的用户也用这些依赖库
+- 具体看[这篇文章](https://stackoverflow.com/questions/26737819/why-use-peer-dependencies-in-npm-for-plugins)
+
+## fork
+- 先fork，然后在setting中重命名项目
+- 然后git clone
+- 然后本地使用git ls-remote看看是否已经转到了自己的项目
+- 如果没有，使用git remote set-url origin xxx来转到自己的项目的origin
+- 在package.json中，把所有的url以及库的名称都改成正确的
+- webpack的config中，把library等属性更新一下
+- 不用git hooks的另一种方法就是直接删掉hooks，rm -rf .git/hooks
+- git checkout -b newBranch
+- git add. git commit即可（这里有一些疑问，详细还是看课程）
