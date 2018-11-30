@@ -3,6 +3,9 @@
 A template for constructing an open source library
 
 I like it!
+----------------
+[![travis build](https://img.shields.io/travis/NickChuCode/nick-library-template.svg?style=flat-square)](https://travis-ci.org/NickChuCode/nick-library-template)
+[![codecov coverage](https://img.shields.io/codecov/c/github/NickChuCode/nick-library-template.svg?style=flat-square)](https://codecov.io/github/NickChuCode/nick-library-template)
 
 ## mocha + chai
 - 把测试文件和被测试的源代码放在一个文件夹下是kent c dodds推荐的一种方式，因为当源文件很多的时候，如果放在test文件夹下，我们需要分别定位src文件和test文件，还不如放在一起，好维护
@@ -70,3 +73,5 @@ I like it!
 - 设置好以后，以后每次push，都会在travis上有一个build
 - build的时候会有成功或者失败的结果，比如这次就告诉我kent的eslint配置了peerDependency，要求eslint的版本是3.2.0，所以之前lint和validate的script一直报错，这就解决了一个问题！
 - 如果build通过了，右上角的badge会显示通过
+- 可以在shields.io上给自己的项目选择badge，用法很简单，可自定义样式，因为是svg，所以对retina支持很好
+- kent写了一篇[博客](https://blog.kentcdodds.com/continuous-delivery-3a4a55baa58a)来介绍continuous delivery，可以看看
