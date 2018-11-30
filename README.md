@@ -62,3 +62,9 @@ I like it!
 - 不用git hooks的另一种方法就是直接删掉hooks，rm -rf .git/hooks
 - git checkout -b newBranch
 - git add. git commit即可（这里有一些疑问，详细还是看课程）
+
+## Tarvis CI
+- 根目录下添加.travis.yml配置文件
+- 需要用自己的github账号来登录
+- 点击新建，sync account，会自动将自己的项目导入
+- 设置好以后，以后每次push，都会在travis上有一个build
