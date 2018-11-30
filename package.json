@@ -42,7 +42,7 @@
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
     "cross-env": "^5.2.0",
-    "eslint": "^5.9.0",
+    "eslint": "3.2.0",
     "eslint-config-kentcdodds": "^9.0.0",
     "ghooks": "^2.0.4",
     "mocha": "^5.2.0",
@@ -70,6 +70,11 @@
     "include": [
       "src"
     ]
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run validate"
+    }
   },
   "babel": {
     "presets": [

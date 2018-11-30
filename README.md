@@ -68,3 +68,4 @@ I like it!
 - 需要用自己的github账号来登录
 - 点击新建，sync account，会自动将自己的项目导入
 - 设置好以后，以后每次push，都会在travis上有一个build
+- build的时候会有成功或者失败的结果，比如这次就告诉我kent的eslint配置了peerDependency，要求eslint的版本是3.2.0，所以之前lint和validate的script一直报错，这就解决了一个问题！

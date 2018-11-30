@@ -6,11 +6,10 @@
 // 下面是mocha + chai的测试
 // 把测试文件和被测试的源代码放在一个文件夹下是kent推荐的一种方式，因为当源文件很多的时候，
 // 如果放在test文件夹下，我们需要分别定位src文件和test文件，还不如放在一起，好维护
-'use strict'
 
-var expect = require('chai').expect
+const expect = require('chai').expect
 // 在node中，可以用.代替./index
-var starwarsNames = require('.')
+const starwarsNames = require('.')
 
 describe('starwars-names', function () {
     it('should have a list a available names', function () {
