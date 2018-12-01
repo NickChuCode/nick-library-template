@@ -1,6 +1,6 @@
 {
   "name": "nick-library-template",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "a template for building an open source library",
   "main": "dist/index.js",
   "scripts": {
