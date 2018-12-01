@@ -75,3 +75,8 @@ I like it!
 - 如果build通过了，右上角的badge会显示通过
 - 可以在shields.io上给自己的项目选择badge，用法很简单，可自定义样式，因为是svg，所以对retina支持很好
 - kent写了一篇[博客](https://blog.kentcdodds.com/continuous-delivery-3a4a55baa58a)来介绍continuous delivery，可以看看
+
+## npm发布
+- 登录自己的npm账户
+- 在自己的命令行中npm login
+- 运行npm publish就可以了（它会先运行npm pack，打包后上传到npm）
