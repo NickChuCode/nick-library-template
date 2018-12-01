@@ -89,4 +89,6 @@ I like it!
 - 考虑一种场景，如果删掉dist，然后publish，那么新的npm包中什么都没有，我们又要改，又要声明这个包deprecated了，所以为了避免这种情况，我们需要automatic releasing
 - automatic releasing还有其他功能，比如自动生成change log
 - 输入npm version major可以直接将当前的npm包升级从1.x.x升级到2.0.0(package.json中的版本信息也会自动更新)
-- 
+- 此时运行git tag，可以看到所有主要的版本
+- 然后npm publish即可
+- 此时
