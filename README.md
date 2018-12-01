@@ -80,3 +80,13 @@ I like it!
 - 登录自己的npm账户
 - 在自己的命令行中npm login
 - 运行npm publish就可以了（它会先运行npm pack，打包后上传到npm）
+- npmcdn.com，现在好像改名字了，是一个不错的npm包的cdn，会实时的代理所有npm上的包，输入https://unpkg.com/nick-library-template@1.0.0/dist/index.umd.js即可访问自己的包
+
+## semantic versioning & releasing
+- 这里是[语义化版本](https://semver.org/lang/zh-CN/)的链接，自己看看
+
+## Automatic Releasing
+- 考虑一种场景，如果删掉dist，然后publish，那么新的npm包中什么都没有，我们又要改，又要声明这个包deprecated了，所以为了避免这种情况，我们需要automatic releasing
+- automatic releasing还有其他功能，比如自动生成change log
+- 输入npm version major可以直接将当前的npm包升级从1.x.x升级到2.0.0(package.json中的版本信息也会自动更新)
+- 
