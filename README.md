@@ -91,4 +91,16 @@ I like it!
 - 输入npm version major可以直接将当前的npm包升级从1.x.x升级到2.0.0(package.json中的版本信息也会自动更新)
 - 此时运行git tag，可以看到所有主要的版本
 - 然后npm publish即可
-- 此时
+- 因为我们忘了build，所以2.0.0中是空的，所以我们要npm run validate或npm run build，然后git add. git commit git push
+- 然后，npm version patch，做一下修正升级，npm publish
+- 最后，不要忘记npm deprecate nick-library-template@2.0.0 forgot to build把2.0.0版本deprecate掉
+- 全局安装semantic-release-cli
+- 自己修改.travis.yml和package.json，虽然semantic-release-cli会在setup的时候自己修改。
+- 使用angular team的[commit message convention](https://github.com/conventional-changelog/conventional-changelog/blob/master/packages/conventional-changelog-angular/README.md)
+- 上面的的convention虽然很麻烦，但有专门的工具来自动生成：commitizen, cz-conventional-changelog和validate-commit-msg
+- 在ghooks中添加对应的动作，然后运行npm i ghooks来更新ghooks
+- 此时，再次提交的时候，如果你的message不符合规定，会有提示INVALID COMMIT MSG: does not match "<type>(<scope>): <subject>" !
+- 可以用commitizen来自动生成符合规范的commit message，在package.json的config属性下加一个commitizen属性
+- commitizen会在node modules下的bin中安装一个git cz，所以我们写一个名叫commit的script在package.json
+- git add .一下，然后就可以运行npm run commit了，它会通过对话的方式来自动生成commit message
+

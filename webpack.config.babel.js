@@ -3,7 +3,7 @@ const path = require('path')
 const context = path.resolve(__dirname, 'src')
 
 module.exports = {
-    entry: context,
+    entry: './src/index',
     mode: "none",
     output: {
         path: path.resolve(__dirname, 'dist'),
