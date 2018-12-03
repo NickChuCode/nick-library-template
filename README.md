@@ -102,5 +102,10 @@ I like it!
 - 此时，再次提交的时候，如果你的message不符合规定，会有提示INVALID COMMIT MSG: does not match "<type>(<scope>): <subject>" !
 - 可以用commitizen来自动生成符合规范的commit message，在package.json的config属性下加一个commitizen属性
 - commitizen会在node modules下的bin中安装一个git cz，所以我们写一个名叫commit的script在package.json
-- git add .一下，然后就可以运行npm run commit了，它会通过对话的方式来自动生成commit message
+- git add .一下，然后就可以运行npm run commit了，它会通过对话的方式来自动生成commit message，然后git push，此时，semantic release会自动生成release版本，同时带着之前写的符合规范的changelog，同时自动进行集成测试，并在github和npm上生成带有changelog的新版本，如果你close了某个issue，只要写closes #xxx, 也会帮你自动在github上close掉这个issue，非常方便！
+- 关于最近event stream事件，首先npm已经删掉了感染的3.3.6版本，同时你也可以通过 npm ls event-stream flatmap-stream 来检查自己的项目是否有感染
 
+## wraps up
+- slides在[这里](https://slides.com/kentcdodds/write-oss#/8/2)
+- 关于如何写好一个library的document的[建议](https://slides.com/kentcdodds/manage-oss#/6/1)
+- 扩展读的一些材料在[这里](https://slides.com/kentcdodds/write-oss#/14)和[这里](https://slides.com/kentcdodds/write-oss#/15)
